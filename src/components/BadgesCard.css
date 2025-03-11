@@ -1,0 +1,52 @@
+.badges-card {
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 16px;
+  }
+  
+  .badges-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  
+  .badges-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  
+  @media (min-width: 768px) {
+    .badges-container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .badge-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+  
+  .badge-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .badge-image {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+  }
+  
+  .badge-name {
+    font-size: 0.875rem;
+    margin-top: 8px;
+    text-align: center;
+  }
+  
