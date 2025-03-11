@@ -1,0 +1,288 @@
+/* App.css */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.app_container {
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  background: linear-gradient(to bottom, #1E3A8A, #0F172A);
+}
+.H1{
+  color: #ffffff;
+}
+.form_container{
+  width:300px;
+  margin:0 auto;
+  border:2px solid #111155;
+  padding:40px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px 2px rgba(17, 17, 85, 0.8);
+  background-color: #115;
+}
+.Label{
+  text-align: left;
+}
+.input-field{
+  width:100%;
+  margin:10px 0;
+  background-color: #112;
+  padding:8px;
+  border:1px solid #ccc;
+  border-radius: 8px;
+}
+.input-field:hover{
+  background-color: white;
+  color: black;
+  box-shadow: 0px 0px 20px cyan;
+}
+.input-field:active{
+  background-color: #112;
+  color: white;
+}
+button {
+  background-color: rgb(43, 163, 163);
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+button:hover {
+  background-color: cyan;
+  color: black;
+  box-shadow: 0px 0px 20px cyan;
+}
+button:active {
+  background-color: rgb(43, 163, 163);
+  color: black;
+}
+.top_right{
+  position : absolute;
+  top:0;
+  right: 1em;
+}
+a:hover{
+  color:cyan;
+  text-shadow: 0px 0px 20px cyan;
+}
+.top_center{
+  position: absolute;
+  top:0;
+}
+
+.progress-container {
+  width: 95%; /* Make it nearly full screen */
+  max-width: 1400px; /* Increase max width */
+  height: 60px; /* Make it taller */
+  background-color: #222;
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+  margin: 30px auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  transition: width 0.5s ease-in-out;
+  border-radius: 30px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  width: 0%; /* Start with 0% width */
+}
+
+/* Glow effect at full progress */
+@keyframes glow {
+  0% { box-shadow: 0 0 10px #00d4ff; }
+  50% { box-shadow: 0 0 40px #00d4ff, 0 0 80px #00d4ff; }
+  100% { box-shadow: 0 0 20px #00d4ff; }
+}
+
+.glow {
+  animation: glow 1s infinite alternate;
+}
+
+/* Task Labels Inside the Bar */
+.task-label {
+  position: absolute;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  white-space: nowrap;
+  text-align: center;
+  width: 150px; /* Increase width for better spacing */
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay effect */
+  backdrop-filter: blur(5px); /* Adds a blur effect */
+  z-index: 999; /* Ensures it's above everything */
+}
+.container {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.profile-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ddd;
+    transition: transform 0.2s;
+}
+
+.profile-img:hover {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.profile-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.profile-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.popup {
+  background: #007bff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.logout-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 5px;
+}

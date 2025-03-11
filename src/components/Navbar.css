@@ -1,0 +1,53 @@
+/* Navbar Container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: linear-gradient(to bottom, #1E3A8A, #0F172A);
+    border-bottom: 1px solid #e0e0e0;
+    position: fixed; /* Fix the navbar at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures it stays above other elements */
+}
+
+/* Navbar Sections */
+.navbar-left, .navbar-center, .navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+/* Username, App Name, and Profile Text */
+.username, .app-name, .profile {
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Centering the App Name */
+.navbar-center {
+    flex-grow: 1;
+    justify-content: center;
+}
+
+/* Profile Image Styling */
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Hover Effect for Profile Image */
+.profile-img:hover {
+    transform: scale(1.1);
+}
+
+/* Ensure Content Below Navbar */
+body {
+    padding-top: 60px; /* Prevents content from being hidden behind fixed navbar */
+}
