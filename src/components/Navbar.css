@@ -9,7 +9,9 @@
     position: fixed; /* Fix the navbar at the top */
     top: 0;
     left: 0;
+    right:0;
     width: 100%;
+    box-sizing: border-box; 
     z-index: 1000; /* Ensures it stays above other elements */
 }
 

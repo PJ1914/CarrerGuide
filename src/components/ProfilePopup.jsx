@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import "./Navbar.css"
 
 const ProfilePopup = () => {
   const [user, setUser] = useState(null);
@@ -8,7 +9,7 @@ const ProfilePopup = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`${"http://localhost:5173/"}/user`, { credentials: "include" })
+    fetch(`http://localhost:5000/user`, { credentials: "include" })
       .then((res) => res.json())
       .then((data) => {
         if (data) setUser(data);
@@ -35,7 +36,21 @@ const ProfilePopup = () => {
 
   return (
     <div className="container">
-      <button className="profile-btn" onClick={togglePopup} aria-label="Open Profile Menu">☰</button>
+      <nav className="navbar">
+            <div className="navbar-left">
+                <span className="username">{user ? user.name : "Loading..."}</span>
+            </div>
+            <div className="navbar-center">
+                <span className="app-name">Career Compass</span>
+            </div>
+            <div className="navbar-right">
+                {user && user.googleProfile ? (
+                    <img src={user.googleProfile} alt="Profile" className="profile-img" />
+                ) : (
+                  <button className="profile-btn" onClick={togglePopup} aria-label="Open Profile Menu">☰</button>
+                )}
+            </div>
+        </nav>
 
       {isOpen && (
         <div className="overlay">

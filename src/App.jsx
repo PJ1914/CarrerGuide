@@ -4,16 +4,11 @@ import "./App.css"; // ✅ Importing CSS globally
 import Basic from "./components/Basic.jsx";
 import Login from "./components/Login.jsx";
 import Dashboard from "./components/Dashboard.jsx";
-import ProfilePopup from "./components/ProfilePopup.jsx";
 import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
     <div>
-      <BrowserRouter>
-      <div className="top_right">
-      <ProfilePopup /></div>
-      </BrowserRouter>
     <div className="app_container">
       
       <Router>
