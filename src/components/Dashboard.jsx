@@ -5,6 +5,7 @@ import StatsCard from "./StatsCard";
 import BadgesCard from "./BadgesCard";
 import SuggestionsCard from "./SuggestionsCard";
 import Navbar from "./Navbar";
+import "./Dashboard.css";
 
 function Dashboard() {
   const [user, setUser] = useState(null);
@@ -40,44 +41,40 @@ function Dashboard() {
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen bg-gray-100">
+    <div className="dashboard-container">
       {/* Navbar */}
       <Navbar />
 
-      {/* Dashboard Content */}
-      <div className="flex flex-col items-center p-6">
-        <h1 className="text-3xl font-bold mb-6 text-center">
-          WELCOME TO CAREER GUIDANCE AI
-        </h1>
+      {/* Dashboard Header */}
+      <h1 className="dashboard-header">WELCOME TO CAREER GUIDANCE AI</h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-7xl">
-          {/* Left Side - Profile Card */}
-          <div className="md:col-span-1">
-            {user ? <ProfileCard user={user} /> : <p>Loading Profile...</p>}
+      {/* Main Dashboard Layout */}
+      <div className="dashboard-content">
+        {/* Left Side - Profile Card */}
+        <div className="dashboard-left">
+          {user ? <ProfileCard user={user} /> : <p>Loading Profile...</p>}
+        </div>
+
+        {/* Right Side - Main Content */}
+        <div className="dashboard-right">
+          <div className="stats-grid">
+            <StudentPathCard />
+            {stats ? <StatsCard stats={stats} /> : <p>Loading Stats...</p>}
           </div>
 
-          {/* Right Side - Main Content */}
-          <div className="md:col-span-2 flex flex-col gap-6">
-            {/* Student Path and Stats */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <StudentPathCard />
-              {stats ? <StatsCard stats={stats} /> : <p>Loading Stats...</p>}
-            </div>
+          {/* Badges Section */}
+          {badges.length > 0 ? (
+            <BadgesCard badges={badges} />
+          ) : (
+            <p className="empty-state">No badges yet.</p>
+          )}
 
-            {/* Badges Section - Full Width */}
-            {badges.length > 0 ? (
-              <BadgesCard badges={badges} />
-            ) : (
-              <p className="text-gray-500 text-center">No badges yet.</p>
-            )}
-
-            {/* Suggestions Section */}
-            {suggestions.length > 0 ? (
-              <SuggestionsCard suggestions={suggestions} />
-            ) : (
-              <p className="text-gray-500 text-center">No suggestions available.</p>
-            )}
-          </div>
+          {/* Suggestions Section */}
+          {suggestions.length > 0 ? (
+            <SuggestionsCard suggestions={suggestions} />
+          ) : (
+            <p className="empty-state">No suggestions available.</p>
+          )}
         </div>
       </div>
     </div>

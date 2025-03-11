@@ -1,0 +1,82 @@
+/* Dashboard Layout */
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+/* Tailwind gray-100 */
+    padding: 24px;
+    align-items: center;
+    width: 100vw; /* Ensures it takes full viewport width */
+    max-width: 100%; /* Prevents unwanted horizontal scrolling */
+    overflow-x: hidden;
+}
+
+/* Dashboard Header */
+.dashboard-header {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 24px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Main Grid Layout */
+.dashboard-content {
+    display: flex;
+    flex-direction: row;
+    width: 95%; /* Increased width to use more space */
+    max-width: 1400px; /* Better max width for larger screens */
+    gap: 24px;
+}
+
+/* Left Side - ProfileCard */
+.dashboard-left {
+    flex: 1; /* Makes it flexible */
+    max-width: 30%;
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Right Side - Main Content */
+.dashboard-right {
+    flex: 2; /* Takes more space */
+    max-width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Stats & Student Path - Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Wider cards */
+    gap: 24px;
+}
+
+/* Card Styling */
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%; /* Ensures cards take full width of grid */
+}
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+    .dashboard-content {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+    }
+
+    .dashboard-left,
+    .dashboard-right {
+        max-width: 100%;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
