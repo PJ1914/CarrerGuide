@@ -14,15 +14,29 @@ const Navbar = () => {
 
     return (
         <nav className="navbar">
+            {/* Left Section: User Information */}
             <div className="navbar-left">
-                <span className="username">{user ? user.name : "Loading..."}</span>
+                {user ? (
+                    <>
+                        <img src={user.googleProfile} alt="Profile" className="profile-img" />
+                        <span className="username">{user.name}</span>
+                    </>
+                ) : (
+                    <span className="username">Loading...</span>
+                )}
             </div>
+
+            {/* Center Section: App Name */}
             <div className="navbar-center">
                 <span className="app-name">Career Compass</span>
             </div>
+
+            {/* Right Section: Profile (Google Data) */}
             <div className="navbar-right">
                 {user && user.googleProfile ? (
-                    <img src={user.googleProfile} alt="Profile" className="profile-img" />
+                    <a href="/profile">
+                        <img src={user.googleProfile} alt="Profile" className="profile-img-large" />
+                    </a>
                 ) : (
                     <span className="profile">Profile</span>
                 )}

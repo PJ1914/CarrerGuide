@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import AgeProgressBar from "./AgeProgressBar";
-import Navbar from './Navbar';
+import ProfilePopup from "./ProfilePopup";
+//import Navbar from './Navbar';
 
 function Dashboard() {
   const [input, setInput] = useState("");
@@ -12,7 +13,7 @@ function Dashboard() {
   return (
     <div>
       <div>
-      <Navbar />
+      <ProfilePopup />
       </div>
    
     <div className="flex flex-col items-center p-4">

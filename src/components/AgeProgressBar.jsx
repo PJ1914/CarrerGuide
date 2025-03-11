@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./App.css";
+import "./Progress.css"
 
 const tasks = [
   { label: "Sign Up", progress: 0 },
