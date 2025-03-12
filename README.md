@@ -40,13 +40,12 @@ Make sure you have the following installed:
 #### 2️⃣ Install dependencies
 ##### Frontend:
 ```bash
- cd frontend
  npm install
  npm run dev
 ```
 ##### Backend (Node.js):
 ```bash
- cd backend
+ cd server
  npm install
  npm server.js
 ```
