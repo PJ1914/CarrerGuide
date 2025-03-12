@@ -84,8 +84,5 @@ Create a `.env` file in `backend/` and add:
 3. Commit your changes
 4. Push to your fork and create a pull request
 
-## 📄 License
-This project is licensed under the MIT License.
-
 ## 📞 Contact
 For any queries, reach out to [pranay.jumbarthi1905@gmail.com].
